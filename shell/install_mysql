@@ -1,0 +1,7 @@
+#! /bin/sh -
+
+yum install mysql-server mysql-devel mysql
+
+
+
+service mysqld start

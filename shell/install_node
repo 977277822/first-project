@@ -1,0 +1,31 @@
+#! /bin/sh -
+
+ROOT_UID=0
+if [ "$UID" -eq "$ROOT_UID" ]
+then
+  echo "You are root."
+else
+  echo "you are not root."
+  exit 0
+fi
+
+
+node_name=node-v4.4.4-linux-x64
+node_downup_path=http://nodejs.org/dist/v4.4.4/$name.tar.gz 
+node_install_path=/wwwroot/node
+
+
+#downup node
+wget -c -N -P $node_install_path $node_downup_path
+
+rm -rf $node_install_path/$node_name
+rm -rf /usr/local/bin/node
+rm -rf /usr/local/bin/npm
+
+tar xvf $node_install_path/$node_name.tar.gz -C $node_install_path
+
+ln -s $node_install_path/$node_name/bin/node /usr/local/bin/node
+ln -s $node_install_path/$node_name/bin/npm /usr/local/bin/npm
+
+
+echo "node install success"

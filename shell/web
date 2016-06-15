@@ -1,0 +1,40 @@
+#! /bin/sh -
+
+ROOT_UID=0
+if [ "$UID" -eq "$ROOT_UID" ]
+then
+  echo "You are root."
+else
+  echo "you are not root."
+  exit 0
+fi
+
+
+if [ $1 == "update" ];then
+    cd /wwwroot
+    mkdir /wwwroot/www
+    cd /wwwroot/www
+    if [ ! -x "first-project" ];then
+        git clone git@github.com:977277822/first-project.git
+        exit 0  
+    fi
+    cd /wwwroot/www/first-project
+    git pull
+    break;
+fi
+
+if [ $1 == "start" ];then
+    cd /wwwroot/www/first-project/web
+    nohup npm start &
+    break;
+fi
+
+if [ $1 == "stop" ];then
+    nodeuid=$(netstat -nlp | grep 80 | awk '{print $7}')  
+    nodeuid=${nodeuid/\/node/""}
+    nodeuid=${nodeuid/LISTENING/""}
+    echo "kill $nodeuid"
+    kill -9 $nodeuid
+fi
+
+
