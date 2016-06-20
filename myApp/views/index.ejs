@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>入戏</title>
     <% include common/resource %>
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+    <script src="javascripts/home.js"></script>
+</head>
+<body ng-app="app">
+<!-- 页面导航  -->
+<ion-nav-bar class="bar-positive nav-title-slide-ios7" align-title="center">
+</ion-nav-bar>
+
+<!-- 视图  -->
+<ion-nav-view></ion-nav-view>
+
+</body>
 </html>
