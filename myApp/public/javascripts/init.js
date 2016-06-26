@@ -2,7 +2,7 @@
  * Created by Mr.Carry on 16/6/20.
  */
 
-angular.module("init",["ionic"]).run(['$rootScope', '$state', '$stateParams',"$ionicLoading",
+angular.module("init",["ionic","modulex"]).run(['$rootScope', '$state', '$stateParams',"$ionicLoading",
     function($rootScope, $state, $stateParams,$ionicLoading) {
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
@@ -56,4 +56,11 @@ angular.module("init",["ionic"]).run(['$rootScope', '$state', '$stateParams',"$i
             }
         }
     };
-});;
+}).service("autoHeight",function(){
+    return {
+        getImgSize : function(w,h){
+            var clientWidth = document.body.clientWidth;
+            return { width : clientWidth , height :  clientWidth * (h / w) } ;
+        }
+    };
+});

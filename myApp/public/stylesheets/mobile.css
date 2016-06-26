@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+/*字号*/
+.font-size10 {
+	font-size: 10px!important;
+}
+
+.font-size12 {
+	font-size: 12px!important;
+}
+
+.font-size14 {
+	font-size: 14px!important;
+}
+
+.font-size16 {
+	font-size: 16px!important;
+}
+
+.font-size18 {
+	font-size: 18px!important;
+}
+
+.font-size20 {
+	font-size: 20px!important;
+}
+
+.font-size22 {
+	font-size: 22px!important;
+}
+
+.font-size24 {
+	font-size: 24px!important;
+}
+
+.font-size26 {
+	font-size: 26px!important;
+}
+/*颜色——文字*/
+.font-color1 {
+	color: rgb(83, 83, 76)!important;
+}
+
+.font-color2 {
+	color: rgb(184, 184, 184)!important;
+}
+
+.font-color3 {
+	color: rgb(250, 213, 98)!important;
+}
+
+.font-color4 {
+	color: rgb(227, 227, 227)!important;
+}
+
+.font-color5 {
+	color: rgb(240, 240, 240)!important;
+}
+
+.font-color6 {
+	color: rgb(255, 142, 45)!important;
+}
+
+.font-color7 {
+	color: rgb(255, 229, 148)!important;
+}
+/*颜色——背景色*/
+.bg-color1 {
+	background-color: rgb(83, 83, 76)!important;
+}
+
+.bg-color2 {
+	background-color: rgb(184, 18, 184)!important;
+}
+
+.bg-color3 {
+	background-color: rgb(250, 213, 98)!important;
+}
+
+.bg-color4 {
+	background-color: rgb(227, 227, 227)!important;
+}
+
+.bg-color5 {
+	background-color: rgb(240, 240, 240)!important;
+}
+
+.bg-color6 {
+	background-color: rgb(255, 142, 45)!important;
+}
+
+.bg-color7 {
+	background-color: rgb(255, 229, 148)!important;
+}
+/*对齐*/
+.text-left {
+	text-align: left!important;
+}
+
+.text-right {
+	text-align: right!important;
+}
+
+.text-center {
+	text-align: center!important;
+}
+
+.pull-right,.pull-left {
+	display: block!important;
+}
+
+.pull-left {
+	float: left!important;
+}
+
+.pull-right {
+	float: right!important;
+}
+
+.pull-clear {
+	clear: both!important;
+}

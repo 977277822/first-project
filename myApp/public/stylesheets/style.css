@@ -75,3 +75,7 @@ ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated, ion-tabs.t
     border: 0px;
     color: rgb(255, 110, 116);
 }
+
+.text-center{
+    align:center;
+}
