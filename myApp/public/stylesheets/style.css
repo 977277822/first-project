@@ -61,3 +61,17 @@ ion-tabs.tabs-color-active-positive .tab-item{
     margin-left: 10px;
     display: block!important;
 }
+
+
+.tabs-top>.tabs, .tabs.tabs-top{
+    bottom: 0px;
+    top: inherit;
+    background-color: rgb(58, 46, 75);
+    height: 45px;
+    border: 0px;
+}
+
+ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active{
+    border: 0px;
+    color: rgb(255, 110, 116);
+}
