@@ -44,4 +44,16 @@ angular.module("init",["ionic"]).run(['$rootScope', '$state', '$stateParams',"$i
             }
         }
     });
-});
+}).directive("backButton", function() {
+    return {
+        scope: true,
+        restrict : 'AE',
+        replace : 'true',
+        template : "<span class=\"header-button ion-chevron-left back-button\" ng-click=\"back()\"></span>",
+        link : function(scope, element, attrs) {
+            scope.back = function(){
+                history.back();
+            }
+        }
+    };
+});;
