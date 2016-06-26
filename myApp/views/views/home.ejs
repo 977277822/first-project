@@ -16,9 +16,9 @@
     <ion-content class="bg-color1" style="margin-bottom: 33px;">
         <ion-list>
             <ion-item style="padding: 0px;border: 0px;background: #ffffff;padding-bottom:24px;margin-bottom: 10px;" ng-repeat="item in banner.data">
-                <image ng-style="opt.getImageSize()" src="/images/pic_info1.png"></image>
-                <p class="text-center font-s18" style="font-weight: bold">罗密欧与朱丽叶－00经典版与10最新版</p>
-                <p class="text-center font-s12 font-color5">“CARA，剧迷心中永远最美的朱丽叶”</p>
+                <image ng-style="opt.getImageSize()" ng-src="{{item.img}}"></image>
+                <p class="text-center font-s18" style="font-weight: bold" ng-bind="item.title">罗密欧与朱丽叶－00经典版与10最新版</p>
+                <p class="text-center font-s12 font-color5" ng-bind="item.recommend">“CARA，剧迷心中永远最美的朱丽叶”</p>
             </ion-item>
         </ion-list>
     </ion-content>
