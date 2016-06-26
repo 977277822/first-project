@@ -1,0 +1,21 @@
+#! /bin/bash -
+
+path="/wwwroot";
+
+cd path;
+
+mkdir -p $path/"nginx";
+
+wget http://nginx.org/download/nginx-1.7.8.tar.gz
+
+tar -zxvf nginx-1.7.8.tar.gz
+
+cd nginx-1.7.8
+
+./configure --prefix=/usr/local/nginx-1.5.1
+
+
+make
+make install
+
+/usr/local/nginx-1.7.8/sbin/nginx
