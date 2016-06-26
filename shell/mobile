@@ -24,13 +24,13 @@ if [ $1 == "update" ];then
 fi
 
 if [ $1 == "start" ];then
-    cd /wwwroot/www/first-project/web
-    nohup node bin/www -p8081 &
+    cd /wwwroot/www/first-project/myApp
+    nohup node bin/www -p8091 &
     break;
 fi
 
 if [ $1 == "stop" ];then
-    nodeuid=$(netstat -nlp | grep 8081 | awk '{print $7}')
+    nodeuid=$(netstat -nlp | grep 8091 | awk '{print $7}')
     nodeuid=${nodeuid/\/node/""}
     nodeuid=${nodeuid/LISTENING/""}
     echo "kill $nodeuid"
