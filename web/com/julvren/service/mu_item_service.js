@@ -11,3 +11,6 @@ module.exports = {
         con.query(queryItems,[],callback);
     }
 }
+module.exports.query(function(data){
+    console.log(data[0].c_name)
+})

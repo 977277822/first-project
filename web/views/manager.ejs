@@ -20,7 +20,7 @@
       <th>出演年份</th>
       <th>语种</th>
       <th>卡司</th>
-      <th>简介</th>
+      <th style="width:200px">简介</th>
       <th>相关专辑</th>
       <th>主创人员</th>
       <th>参演人员</th>
@@ -28,20 +28,22 @@
       <th>操作</th>
     </tr>
     <tr>
-      <td>序号</td>
-      <td>海报</td>
-      <td>标题</td>
-      <td>中文剧名</td>
-      <td>英文剧名</td>
-      <td>出演年份</td>
-      <td>语种</td>
-      <td>卡司</td>
-      <td>简介</td>
-      <td>相关专辑</td>
-      <td>主创人员</td>
-      <td>参演人员</td>
-      <td>其他相似</td>
+      <% items.forEach(function(item){ %>
+      <td><%=item.id + 1%></td>
+      <td><%=item.poster%></td>
+      <td><%=item.title%></td>
+      <td><%=item.c_name%></td>
+      <td><%=item.e_name%></td>
+      <td><%=item.show_datetime%></td>
+      <td><%=item.language%></td>
+      <td><%=item.cast%></td>
+      <td><%=item.detail%></td>
+      <td><%=item.collection%></td>
+      <td><%=item.leading_creator%></td>
+      <td><%=item.leading_in%></td>
+      <td><%=item.other_similar%></td>
       <td>编辑 删除</td>
+      <% }) %>
     </tr>
   </table>
   </body>
