@@ -1,9 +1,10 @@
 {
   "name": "web",
   "version": "0.0.0",
-  "env" : "115.28.222.166",
-  "dev" : "localhost",
+  "env": "115.28.222.166",
+  "dev": "localhost",
   "private": true,
+  "connection" : "connection.js",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -14,6 +15,7 @@
     "ejs": "~2.3.3",
     "express": "~4.13.1",
     "morgan": "~1.6.1",
+    "mysql": "^2.11.1",
     "serve-favicon": "~2.3.0"
   }
 }
