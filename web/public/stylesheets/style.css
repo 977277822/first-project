@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+.menu-icon {
+    margin-left: 10px!important;
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    margin-right: 5px!important;
 }
-a {
-  color: #00B7FF;
-}
-/*# sourceMappingURL=style.css.map */

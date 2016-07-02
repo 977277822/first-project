@@ -3,10 +3,14 @@
  */
 
 
-managerApp.controller("menuCtrl", function ($scope) {
+managerApp.controller("menuCtrl", function ($scope, $mdSidenav) {
+    $scope.leftClose = function(){
+        $mdSidenav('left-menu').close();
+    };
+
 });
 
-managerApp.controller("headerToolberCtrl", function ($scope, $mdSidenav, $timeout, $log) {
+managerApp.controller("headerToolberCtrl", function ($scope, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left-menu');
 
     function buildToggler(navID) {
