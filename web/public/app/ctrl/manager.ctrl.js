@@ -18,6 +18,4 @@ managerApp.controller("headerToolberCtrl", function ($scope, $mdSidenav) {
             $mdSidenav(navID).toggle();
         }
     }
-
-
 });
