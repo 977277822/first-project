@@ -15,13 +15,13 @@ managerApp.controller("itemsCtrl", function ($scope, itemsService,$mdDialog) {
         });
     };
 
-    opt.del = function(id,ev){
+    opt.del = function(item,ev){
         var confirm = $mdDialog.confirm()
-            .title('提示')
-            .textContent('确认删除吗？')
+            .title("删除提示")
+            .textContent("确认删除["+ item.c_name+"]吗？")
             .targetEvent(ev)
-            .ok('取消')
-            .cancel('删除');
+            .ok("取消")
+            .cancel("删除");
         $mdDialog.show(confirm).then(function() {
             console.log("取消")
         }, function() {
