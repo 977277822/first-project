@@ -1,3 +1,25 @@
-<md-content flex layout-padding>
-    剧目
+
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <md-card ng-repeat="item in items">
+            <img ng-src="{{'/img/images/pic_info1.png'}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <div class="md-headline" ng-bind="item.c_name">Action buttons</div>
+                    <div class="md-headline" style="font-size: 12px" ng-bind="item.e_name">Action buttons</div>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p ng-bind-html="item.detail">
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                    two most important words in Ernest Greene's musical language: feel it. It's a simple request, as
+                    well...
+                </p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button>编辑</md-button>
+                <md-button ng-click="opt.del(item.uuid,$event)">删除</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
 </md-content>
