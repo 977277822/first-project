@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>音乐剧管理</title>
-    <% include common/resources%>
+    <% include common/resources %>
 
     <script src="/app/action/manager.action.js"></script>
     <script src="/app/ctrl/manager.ctrl.js"></script>
 
     <script src="/app/ctrl/items.ctrl.js"></script>
     <script src="/app/service/items.service.js"></script>
-  </head>
-  <body ng-app="managerApp">
-    <% include common/header_toobar%>
-    <% include common/menu%>
+</head>
+<body ng-app="managerApp" ng-controller="managerCtrl">
+<% include common/header_toobar %>
+<% include common/menu %>
 
-    <section layout="row" flex ui-view></section>
-    <% include common/footer_toobar.ejs%>
-  </body>
+<section layout="row" flex ui-view></section>
+<% include common/footer_toobar.ejs %>
+</body>
 </html>

@@ -3,7 +3,7 @@
  */
 
 
-var managerApp = angular.module("managerApp", ["ngMaterial", "ui.router", "ngResource","ngSanitize"]).config(function ($mdThemingProvider) {
+var managerApp = angular.module("managerApp", ["ngMaterial", "ui.router", "ngResource", "ngSanitize"]).config(function ($mdThemingProvider) {
     $mdThemingProvider.theme('default')
         .primaryPalette('blue');
 });

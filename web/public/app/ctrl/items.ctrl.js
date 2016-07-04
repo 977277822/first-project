@@ -3,31 +3,40 @@
  */
 
 
-managerApp.controller("itemsCtrl", function ($scope, itemsService,$mdDialog) {
+managerApp.controller("itemsCtrl", function ($rootScope, $scope, itemsService, $mdDialog) {
 
     $scope.items = [];
 
     $scope.opt = opt = {};
 
-    opt.refresh = function(){
-        itemsService.query().then(function(data){
+    opt.refresh = function () {
+        itemsService.query().then(function (data) {
             $scope.items = data;
         });
     };
 
-    opt.del = function(item,ev){
+    opt.del = function (item, ev) {
         var confirm = $mdDialog.confirm()
             .title("删除提示")
-            .textContent("确认删除["+ item.c_name+"]吗？")
+            .textContent("确认删除[" + item.c_name + "]吗？")
             .targetEvent(ev)
             .ok("取消")
             .cancel("删除");
-        $mdDialog.show(confirm).then(function() {
+        $mdDialog.show(confirm).then(function () {
             console.log("取消")
-        }, function() {
+        }, function () {
             console.log("删除")
         });
     }
+    $scope.$on("addItem", function () {
+        alert("添加新剧")
+    });
+
+    $scope.$emit("show-toolbar-addItem", true);
+
+    $scope.$on("$destroy", function () {
+        $scope.$emit("show-toolbar-addItem", false);
+    });
 
     opt.refresh();
 });

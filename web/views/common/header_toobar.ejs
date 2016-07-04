@@ -7,8 +7,23 @@
             <span>剧旅人</span>
         </h2>
         <span flex></span>
-        <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/more_svg.svg"></md-icon>
-        </md-button>
+        <md-menu>
+            <md-button class="md-icon-button" aria-label="item menu" ng-click="$mdOpenMenu()">
+                <md-icon md-svg-icon="img/icons/more_svg.svg"></md-icon>
+            </md-button>
+            <md-menu-content>
+                <md-menu-item ng-if="isAddItem">
+                    <md-button ng-click="addItem()">
+                        添加新剧
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        更多
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
     </div>
 </md-toolbar>
