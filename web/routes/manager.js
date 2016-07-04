@@ -17,4 +17,9 @@ router.get('/page/items', function(req, res, next) {
 router.get('/page/index', function(req, res, next) {
   res.render('page/index');
 });
+
+router.get('/page/addItem', function(req, res, next) {
+  res.render('page/addItem');
+});
+
 module.exports = router;
